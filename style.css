@@ -1,0 +1,9 @@
+* {
+    font-family: monospace;
+}
+body {
+    background-color: #888;
+}
+canvas {
+    background-color: #222;
+}
