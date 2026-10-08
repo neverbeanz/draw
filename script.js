@@ -20,6 +20,8 @@ window.onload = function() {
         lastY = e.offsetY;
     });
     canvas.addEventListener('mousemove', (e)=> {
+        if(e.button == 2) return;
+
         if(isDrawing) {
             context.beginPath();
             context.moveTo(lastX, lastY);
