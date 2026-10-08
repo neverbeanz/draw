@@ -15,13 +15,12 @@ window.onload = function() {
     applyButton.addEventListener('click', ApplyCanvasProperties);
 
     canvas.addEventListener('mousedown', (e)=> {
+        if(e.button == 2) return;
         isDrawing = true;
         lastX = e.offsetX;
         lastY = e.offsetY;
     });
     canvas.addEventListener('mousemove', (e)=> {
-        if(e.button == 2) return;
-
         if(isDrawing) {
             context.beginPath();
             context.moveTo(lastX, lastY);
@@ -43,7 +42,7 @@ window.onload = function() {
         isDrawing = false;
     });
 
-    strokeWidth.addEventListener('input', ()=> {
+    strokeWidthInput.addEventListener('input', ()=> {
         strokeWidth = st
     });
 };
